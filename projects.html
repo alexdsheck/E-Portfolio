@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projects | Alexander Sheckells</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body takes up full height */
+        }
+
+        /* Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+        }
+
+        nav ul li a:hover {
+            color: #1e3c72;
+            border-bottom: 2px solid #1e3c72;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            flex-grow: 1; /* Ensure this section takes up remaining space */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            color: #1e3c72;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            padding: 0 20px 20px 20px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .project-details {
+            display: none; /* Initially hidden */
+            padding: 0 20px 20px;
+            color: #666;
+        }
+
+        .project-details ul {
+            list-style: disc;
+            margin: 10px 0 20px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 0; /* Removed margin to stick to bottom */
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .projects-section h2 {
+                font-size: 2rem;
+            }
+
+            .project-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .project-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <h1>Alexander Sheckells</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2>Research & Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project Card 1 -->
+                <div class="project-card" onclick="toggleDetails('project1-details')" style="position: relative;">
+                    <div style="background-color: #ffcc00; padding: 5px; text-align: center; font-weight: bold; position: absolute; top: -10px; left: 0; right: 0; z-index: 1;">
+                        Research (Pending Publication)
+                    </div>
+                    <h3 style="padding-top: 20px;">SimU: AI-Driven Facilitator Feedback Model</h3>
+                    <p>Click to learn more about this research project.</p>
+                    <div class="project-details" id="project1-details">
+                        <p><strong>Description:</strong> Developed an AI-driven feedback system for nursing education at UNCW, currently pending publication.</p>
+                        <ul>
+                            <li>Designed and implemented a web interface for real-time feedback.</li>
+                            <li>Collaborated with nursing faculty to refine feedback mechanisms.</li>
+                            <li>Tested and evaluated system effectiveness through user feedback.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> LangChain, GPT-4, Software Engineering.
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" onclick="toggleDetails('project2-details')">
+                    <h3>DNA Sequencing & Fuzzy Searching</h3>
+                    <p>Click to learn more about this project.</p>
+                    <div class="project-details" id="project2-details">
+                        <p><strong>Description:</strong> Collaborated on a project comparing fuzzy searching algorithms for DNA sequence matching.</p>
+                        <ul>
+                            <li>Analyzed time and space complexities of various algorithms.</li>
+                            <li>Implemented a prototype for performance testing.</li>
+                            <li>Presented findings to the research team.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> Python, Algorithm Design.
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" onclick="toggleDetails('project3-details')">
+                    <h3>Shape Hierarchy</h3>
+                    <p>Click to learn more about this project.</p>
+                    <div class="project-details" id="project3-details">
+                        <p><strong>Description:</strong> Created a shape hierarchy in Python to handle different shapes with polymorphism.</p>
+                        <ul>
+                            <li>Implemented classes for various shapes.</li>
+                            <li>Developed methods for area and perimeter calculations.</li>
+                            <li>Included exception handling for invalid shapes.</li>
+                            <li>Developed interface to display hierarchy.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> Python, Object-Oriented Programming.
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" onclick="toggleDetails('project4-details')">
+                    <h3>Simulating Planar Motion of a Quadrotor</h3>
+                    <p>Click to learn more about this project.</p>
+                    <div class="project-details" id="project4-details">
+                        <p><strong>Description:</strong> Developed a simulation model for the planar motion of a quadrotor.</p>
+                        <ul>
+                            <li>Modeled dynamics and kinematics for quadrotor motion.</li>
+                            <li>Implemented control algorithms (PID and MPC) for trajectory tracking.</li>
+                            <li>Visualized simulation results to analyze performance.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> MPC, Control Systems, Simulation.
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" onclick="toggleDetails('project5-details')">
+                    <h3>Tip Calculator</h3>
+                    <p>Click to learn more about this project.</p>
+                    <div class="project-details" id="project5-details">
+                        <p><strong>Description:</strong> Created a JavaFX application to calculate tips based on user input.</p>
+                        <ul>
+                            <li>Designed a user-friendly interface for inputting bill amounts and tip percentages.</li>
+                            <li>Implemented calculations for total amounts with tips.</li>
+                            <li>Conducted testing for edge cases and user feedback integration.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> Java, Object Oriented Programming, JavaFX.
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card" onclick="toggleDetails('project6-details')">
+                    <h3>Twitter Sentiment Analysis</h3>
+                    <p>Click to learn more about this project.</p>
+                    <div class="project-details" id="project6-details">
+                        <p><strong>Description:</strong> Analyzed sentiment of tweets related to various topics using Python and Natural Language Processing.</p>
+                        <ul>
+                            <li>Collected tweet data using Twitter API.</li>
+                            <li>Applied NLP techniques and Machine Learning models to classify sentiment as positive, negative, or neutral.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> Python, Natural Language Processing, Data Visualization.
+                    </div>
+                </div>
+
+                <!-- Project Card 7 -->
+                <div class="project-card" onclick="toggleDetails('project7-details')">
+                    <h3>Variational Autoencoder</h3>
+                    <p>Click to learn more about this project.</p>
+                    <div class="project-details" id="project7-details">
+                        <p><strong>Description:</strong> Built a Variational Autoencoder for digit recognition and reconstruction from the MNIST dataset.</p>
+                        <ul>
+                            <li>Implemented model architecture using TensorFlow.</li>
+                            <li>Trained the model on the MNIST dataset to achieve high accuracy.</li>
+                            <li>Developed visualizations for understanding model performance.</li>
+                        </ul>
+                        <strong>Skills Required:</strong> Python, TensorFlow, Machine Learning.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alexander Sheckells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(projectId) {
+            const details = document.getElementById(projectId);
+            details.style.display = details.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

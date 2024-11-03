@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Experience | Alexander Sheckells</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body takes up full height */
+        }
+
+        /* Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+        }
+
+        nav ul li a:hover {
+            color: #1e3c72;
+            border-bottom: 2px solid #1e3c72;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background-color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .timeline-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #1e3c72; /* Timeline line color */
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            width: 45%; /* Adjust width for better spacing */
+            position: relative;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0; /* Equal margin on top and bottom */
+            transition: transform 0.3s ease; /* Added transition for hover effect */
+        }
+
+        .timeline-item h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Positioning for timeline items */
+        .timeline-item.left {
+            left: calc(50% - 55%); /* Align left items further from the timeline */
+            transform: translateX(-10%); /* Adjust horizontal position */
+        }
+
+        .timeline-item.right {
+            left: calc(50% + 10%); /* Align right items to the right */
+            transform: translateX(10%); /* Adjust horizontal position */
+        }
+
+        /* Hover effect */
+        .timeline-item:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        /* Details */
+        .details {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto; /* Stick to the bottom */
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .timeline-item h3 {
+                font-size: 1.3rem;
+            }
+
+            .timeline-item p {
+                font-size: 0.9rem;
+            }
+
+            .timeline-item {
+                width: 90%; /* Full width on mobile */
+                left: 0; /* Align all items to the left on mobile */
+                transform: none; /* Remove transform on mobile */
+            }
+
+            .timeline::before {
+                display: none; /* Hide line for mobile view */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <h1>Alexander Sheckells</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <h2>Experience</h2>
+            <div class="timeline">
+
+                <!-- Job Item 1 -->
+                <div class="timeline-item left" onclick="toggleDetails(this)">
+                    <h3>Researcher</h3>
+                    <p><strong>University of North Carolina Wilmington</strong> - Oct 2024 - Present</p>
+                    <p>Co-author/Programmer of SimU, a large language model that improves facilitator-patient interaction.</p>
+                    <div class="details">Engaged in the development and implementation of AI-driven solutions for educational purposes.</div>
+                </div>
+
+                <!-- Job Item 2 -->
+                <div class="timeline-item right" onclick="toggleDetails(this)">
+                    <h3>Student Researcher</h3>
+                    <p><strong>University of North Carolina Wilmington</strong> - Mar 2024 - Oct 2024</p>
+                    <p>Part of development team for SimU, a large language model that will aid UNCW’s nursing program.</p>
+                    <div class="details">Contributed to research on AI applications in nursing education and patient interaction.</div>
+                </div>
+
+                <!-- Job Item 3 -->
+                <div class="timeline-item left" onclick="toggleDetails(this)">
+                    <h3>Ocean Rescue</h3>
+                    <p><strong>Duck Surf Rescue</strong> - 2023 - Present</p>
+                    <p>Seasonal position providing lifeguard services and ensuring the safety of beachgoers.</p>
+                    <div class="details">Oversaw beach safety protocols and engaged in rescue operations when necessary.</div>
+                </div>
+
+                <!-- Job Item 4 -->
+                <div class="timeline-item right" onclick="toggleDetails(this)">
+                    <h3>Professional Skimboarder</h3>
+                    <p><strong>United Skim Tour</strong> - Sep 2021 - Present</p>
+                    <p>Professional skimboarder working with companies through sponsorships and conducting lessons emphasizing effective communication and leadership.</p>
+                    <div class="details">Engaged in promotions and collaborations with brands, while mentoring others in skimboarding techniques and safety.</div>
+                </div>
+
+                <!-- Job Item 5 -->
+                <div class="timeline-item left" onclick="toggleDetails(this)">
+                    <h3>Retail Sales Associate</h3>
+                    <p><strong>Outer Banks Boarding Company</strong> - 2022 - 2023</p>
+                    <p>Provided exceptional customer service and product knowledge in a fast-paced retail environment.</p>
+                    <div class="details">Assisted customers with product selection, managed inventory, and helped create a positive shopping experience.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alexander Sheckells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(element) {
+            const details = element.querySelector('.details');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

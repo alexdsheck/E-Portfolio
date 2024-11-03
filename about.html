@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me | Alexander Sheckells</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+        }
+
+        nav ul li a:hover {
+            color: #1e3c72;
+            border-bottom: 2px solid #1e3c72;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            flex-grow: 1; /* Ensure this section takes up remaining space */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .about-content {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            width: 150px; /* Adjust as needed */
+            height: 150px; /* Adjust as needed */
+            border-radius: 50%; /* Make it circular */
+            object-fit: cover; /* Cover the image within the circle */
+            margin-bottom: 20px; /* Space below the image */
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: #1e3c72; /* Button color */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-size: 1rem; /* Font size */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            margin-top: 20px; /* Space above the button */
+        }
+
+        .btn:hover {
+            background-color: #2a4d91; /* Darker shade on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto; /* This pushes the footer to the bottom */
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .about-section h2 {
+                font-size: 2rem;
+            }
+
+            .about-content p {
+                font-size: 0.9rem;
+            }
+
+            .about-image {
+                width: 120px; /* Adjust for smaller screens */
+                height: 120px; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <h1>Alexander Sheckells</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="data:image/jpeg;base64,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" alt="Alexander Sheckells" class="about-image">
+                <p>Hello! I’m Alexander Sheckells, a passionate Computer Scientist specializing in Software Engineering, Artificial Intelligence, and Machine Learning. I'm currently pursuing a Master's in Computer Science at UNCW with a 4.0 GPA, and a Bachelors in Computer Science, concentrating in Artificial Intelligence, with a 3.9 GPA. My work focuses on applying cutting-edge AI and machine learning techniques to real-world problems, with an emphasis on healthcare and data-driven projects.
+                <p>I thrive in collaborative environments and enjoy tackling complex challenges.
+                </p>
+                <a href="projects.html" class="btn">View My Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alexander Sheckells. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

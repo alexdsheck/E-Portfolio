@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Skills | Alexander Sheckells</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+        }
+
+        nav ul li a:hover {
+            color: #1e3c72;
+            border-bottom: 2px solid #1e3c72;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            flex-grow: 1; /* Ensure this section takes up remaining space */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            word-wrap: break-word; /* Ensure long words are broken properly */
+            position: relative; /* Position relative for pseudo-element */
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 15px; /* Space between text and sub-skills */
+        }
+
+        .sub-skills {
+            display: block; /* Always display sub-skills */
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: left;
+            line-height: 1.5; /* Better spacing for readability */
+            border-top: 1px solid #eaeaea; /* Separator line */
+            padding-top: 10px; /* Space between header and sub-skills */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto; /* This pushes the footer to the bottom */
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .skills-section h2 {
+                font-size: 2rem;
+            }
+
+            .skill-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .skill-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <h1>Alexander Sheckells</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-list">
+
+                <!-- Skill Card 1: Software Engineering -->
+                <div class="skill-card">
+                    <h3>Software Engineering</h3>
+                    <p>Strong understanding of software development lifecycle and methodologies.</p>
+                    <div class="sub-skills">
+                        <p>• Agile and Scrum methodologies<br>
+                           • Software design patterns and best practices<br>
+                           • Version control (Git)<br></p>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2: Artificial Intelligence -->
+                <div class="skill-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Expertise in developing machine learning models and algorithms.</p>
+                    <div class="sub-skills">
+                        <p>• Neural network architectures<br>
+                           • Supervised and unsupervised learning<br>
+                           • Natural Language Processing (NLP)<br>
+                           • Deep learning frameworks (Keras, TensorFlow)</p>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3: Programming Languages -->
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>Proficient in multiple programming languages for various applications.</p>
+                    <div class="sub-skills">
+                        <p>• Python: Data analysis, automation<br>
+                           • Java: Object-oriented programming, application development<br>
+                           • SQL: Database queries and management<br>
+                           • Assembly: Understanding of low-level programming concepts</p>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4: Frameworks/Libraries -->
+                <div class="skill-card">
+                    <h3>Frameworks and Libraries</h3>
+                    <p>Experience with various technologies for building applications.</p>
+                    <div class="sub-skills">
+                        <p>• LangChain: Enhanced data retrieval and interaction<br>
+                           • scikit-learn: Implemented machine learning algorithms<br>
+                           • NumPy: Proficient in numerical analysis and data manipulation<br>
+                           • PyTorch: Developed models for research and experimentation</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alexander Sheckells. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
